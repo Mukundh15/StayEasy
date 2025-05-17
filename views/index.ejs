@@ -95,9 +95,10 @@
         <div class="card col listing-card">
             <img src="<%=listing.image.url%>" class="card-img-top" alt="Listing-image" style="height:20rem">
             <div class="card-body">
+                <% const gst=(listing.price*18)/100; %>
                 <p class="card-text"><b><%=listing.title%></b> <br>&#8377; 
                     <%=listing.price.toLocaleString("en-IN")%>/night
-                    <i class="tax-info">  &nbsp; &nbsp;+<%=(listing.price.toLocaleString("en-IN") *18)/100%> GST</i>
+                    <i class="tax-info">  &nbsp; &nbsp;+<%=gst.toLocaleString("en-IN")%> GST</i>
                 </p>
             </div>
         </div>
