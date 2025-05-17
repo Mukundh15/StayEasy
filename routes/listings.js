@@ -21,7 +21,7 @@ router.get("/search",listingController.searchdestination)
 router
     .route("/:id")
     .get(wrapAsync(listingController.showListing))
-    .put(isLoggedIn,isOwner,validateListing,wrapAsync(listingController.updateListing))
+    .put(isLoggedIn,upload.single("listing[image]"),isOwner,validateListing,wrapAsync(listingController.updateListing))
     .delete(isLoggedIn,isOwner,wrapAsync(listingController.deleteListing));
 
 router.get("/:id/edit",isLoggedIn,isOwner,wrapAsync(listingController.editListing));
