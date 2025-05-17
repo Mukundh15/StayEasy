@@ -20,6 +20,34 @@
             <label for="image" class="form-label">Upload New Image</label>
             <input type="file" name="listing[image]" class="form-control">
         </div>
+        <div class="mb-3">
+            <label for="category" class="form-label">Category</label>
+            <select name="listing[category]" class="form-control" required>
+                <option disabled>Select a category</option>
+                <option value="mountains" <%= listing.category === "mountains" ? "selected" : "" %>>Mountains</option>
+                <option value="arctic" <%= listing.category === "arctic" ? "selected" : "" %>>Arctic</option>
+                <option value="farms" <%= listing.category === "farms" ? "selected" : "" %>>Farms</option>
+                <option value="deserts" <%= listing.category === "deserts" ? "selected" : "" %>>Deserts</option>
+                <option value="pool" <%= listing.category === "pool" ? "selected" : "" %>>Pool</option>
+                <option value="castles" <%= listing.category === "castles" ? "selected" : "" %>>Castles</option>
+                <option value="beach" <%= listing.category === "beach" ? "selected" : "" %>>Beach</option>
+                <option value="forest" <%= listing.category === "forest" ? "selected" : "" %>>Forest</option>
+                <option value="camping" <%= listing.category === "camping" ? "selected" : "" %>>Camping</option>
+                <option value="skiing" <%= listing.category === "skiing" ? "selected" : "" %>>Skiing</option>
+                <option value="countryside" <%= listing.category === "countryside" ? "selected" : "" %>>Countryside</option>
+                <option value="urban" <%= listing.category === "urban" ? "selected" : "" %>>Urban</option>
+                <option value="historic" <%= listing.category === "historic" ? "selected" : "" %>>Historic</option>
+                <option value="luxury" <%= listing.category === "luxury" ? "selected" : "" %>>Luxury</option>
+                <option value="treehouse" <%= listing.category === "treehouse" ? "selected" : "" %>>Treehouse</option>
+                <option value="cabin" <%= listing.category === "cabin" ? "selected" : "" %>>Cabin</option>
+                <option value="tinyhome" <%= listing.category === "tinyhome" ? "selected" : "" %>>Tiny Home</option>
+                <option value="boat" <%= listing.category === "boat" ? "selected" : "" %>>Boat</option>
+                <option value="wildlife" <%= listing.category === "wildlife" ? "selected" : "" %>>Wildlife</option>
+                <option value="room" <%= listing.category === "room" ? "selected" : "" %>>Room</option>
+                <option value="iconic" <%= listing.category === "iconic" ? "selected" : "" %>>Iconic</option>
+                <option value="farm" <%= listing.category === "farm" ? "selected" : "" %>>Farm</option>
+            </select>
+        </div>
         <div class="row">
             <div class="mb-3 col-mid-4">
                 <label for="price" class="form-label">Price</label>

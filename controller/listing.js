@@ -65,6 +65,10 @@ module.exports.editListing=async(req,res)=>{
 module.exports.updateListing=async (req,res)=>{
     let {id}=req.params;
     let listing=await Listing.findByIdAndUpdate(id,{...req.body.listing});
+    if (!listing) {
+        req.flash("error", "Listing not found.");
+        return res.redirect("/listings");
+    }
     if(typeof req.file!=="undefined"){
         let url=req.file.path;
         let filename=req.file.filename;
